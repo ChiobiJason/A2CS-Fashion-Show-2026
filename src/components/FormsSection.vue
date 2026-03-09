@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 
+import qrCode from '../assets/A2CS IG QR Code.svg'
+
 const activeForm = ref('model') // 'model' or 'volunteer'
 const loading = ref(false)
 const submitted = ref(false)
@@ -134,15 +136,17 @@ const resetForm = () => {
 
       <div class="social-footer reveal">
         <div class="instagram-card glass-morphism">
-          <div class="insta-info">
-            <span class="insta-tag">Follow us</span>
-            <h3>@A2CS_Fashion</h3>
-          </div>
           <div class="qr-box">
             <div class="qr-code-placeholder">
-              <div class="qr-pattern"></div>
+              <img :src="qrCode" alt="Instagram QR Code" class="qr-image" />
             </div>
-            <p>Scan for updates</p>
+            <p>Scan to explore</p>
+          </div>
+          <div class="insta-info">
+            <span class="insta-tag">Follow us</span>
+            <a href="https://www.instagram.com/a2cseast" target="_blank" class="insta-link">
+              <h3>@a2cseast</h3>
+            </a>
           </div>
         </div>
       </div>
@@ -334,9 +338,11 @@ const resetForm = () => {
 
 .instagram-card {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 32px 48px;
+  text-align: center;
+  padding: 60px 40px;
+  gap: 32px;
 }
 
 .insta-tag {
@@ -345,38 +351,59 @@ const resetForm = () => {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-}
-
-.insta-info h3 {
-  font-size: 1.8rem;
-  margin-top: 8px;
-}
-
-.qr-box {
-  text-align: center;
-}
-
-.qr-code-placeholder {
-  width: 100px;
-  height: 100px;
-  background: #fff;
-  border-radius: 12px;
-  padding: 10px;
+  display: block;
   margin-bottom: 8px;
 }
 
-.qr-pattern {
+.insta-link {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.insta-link:hover {
+  color: var(--primary);
+}
+
+.insta-info h3 {
+  font-size: 2.2rem;
+  font-family: 'Outfit', sans-serif;
+}
+
+.qr-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.qr-code-placeholder {
+  width: 180px;
+  height: 180px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.instagram-card:hover .qr-code-placeholder {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 255, 0, 0.2);
+}
+
+.qr-image {
   width: 100%;
   height: 100%;
-  background: repeating-conic-gradient(#000 0% 25%, #fff 0% 50%) 50% / 10px 10px;
-  opacity: 0.8;
+  object-fit: contain;
 }
 
 .qr-box p {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
 }
 
 @media (max-width: 600px) {

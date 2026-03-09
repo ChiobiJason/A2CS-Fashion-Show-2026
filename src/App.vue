@@ -100,8 +100,8 @@ onMounted(() => {
             <a href="https://github.com/ChiobiJason" target="_blank" class="trademark">built by jasonthe_dev</a>
           </div>
           <div class="footer-links">
-            <a href="#">Instagram</a>
-            <a href="#">Contact</a>
+            <a href="https://www.instagram.com/a2cseast" target="_blank">@a2cseast</a>
+            <a href="https://linktr.ee/a2cs" target="_blank">Linktree</a>
           </div>
         </div>
       </div>
