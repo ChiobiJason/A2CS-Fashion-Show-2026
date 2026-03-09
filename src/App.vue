@@ -411,6 +411,13 @@ onMounted(() => {
     flex-direction: column;
     align-items: center;
   }
+  .hero-logo {
+    height: 100px;
+    margin-bottom: 24px;
+  }
+  .hero-inner {
+    padding-bottom: 120px;
+  }
   .cta-group {
     justify-content: center;
   }
