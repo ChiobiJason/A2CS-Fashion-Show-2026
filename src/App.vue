@@ -4,6 +4,8 @@ import JudgesSection from './components/JudgesSection.vue'
 import CategorySection from './components/CategorySection.vue'
 import FormsSection from './components/FormsSection.vue'
 
+import logo from './assets/A2CS Logo.jpg'
+
 onMounted(() => {
   const observerOptions = {
     threshold: 0.1,
@@ -34,6 +36,7 @@ onMounted(() => {
       
       <div class="container hero-inner">
         <div class="hero-content">
+          <img :src="logo" alt="A2CS Logo" class="hero-logo reveal" />
           <div class="badge reveal">Fashion Forward 2026</div>
           <h1 class="main-title reveal">
             A2CS <span class="text-gradient">FASHION</span> SHOW
@@ -89,7 +92,9 @@ onMounted(() => {
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <div class="footer-logo">A2CS</div>
+          <div class="footer-logo">
+            <img :src="logo" alt="A2CS Logo" class="footer-logo-img" />
+          </div>
           <div class="footer-info">
             <p>&copy; 2026 A2CS Fashion Show. Crafted for the future.</p>
             <a href="https://github.com/ChiobiJason" target="_blank" class="trademark">built by jasonthe_dev</a>
@@ -191,7 +196,22 @@ onMounted(() => {
 .text-gradient {
   background: linear-gradient(to right, #fff, var(--primary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.hero-logo {
+  height: 140px;
+  width: auto;
+  margin-bottom: 32px;
+  border-radius: 20px;
+  display: block;
+}
+
+.footer-logo-img {
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
 }
 
 .subtitle {
