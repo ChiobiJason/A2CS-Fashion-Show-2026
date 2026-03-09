@@ -4,7 +4,7 @@ import JudgesSection from './components/JudgesSection.vue'
 import CategorySection from './components/CategorySection.vue'
 import FormsSection from './components/FormsSection.vue'
 
-import logo from './assets/A2CS Logo.jpg'
+import logo from './assets/A2CS Logo.png'
 
 onMounted(() => {
   const observerOptions = {
