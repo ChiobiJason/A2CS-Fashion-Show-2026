@@ -97,7 +97,7 @@ onMounted(() => {
           </div>
           <div class="footer-info">
             <p>&copy; 2026 A2CS Fashion Show. Crafted for the future.</p>
-            <a href="https://github.com/ChiobiJason" target="_blank" class="trademark">built by jasonthe_dev</a>
+            <a href="https://linktr.ee/chisomchiobi" target="_blank" class="trademark">built by jasonthe_dev</a>
           </div>
           <div class="footer-links">
             <a href="https://www.instagram.com/a2cseast" target="_blank">@a2cseast</a>

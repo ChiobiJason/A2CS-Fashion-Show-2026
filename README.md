@@ -57,4 +57,4 @@ npm run build
 
 ---
 
-**Built by [jasonthe_dev](https://github.com/ChiobiJason)**
+**Built by [jasonthe_dev](https://linktr.ee/chisomchiobi)**
